@@ -1,0 +1,968 @@
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<class>ExpertDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>ExpertDlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>617</width>
+            <height>372</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Expert configuration - QtWvDialer</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>true</bool>
+    </property>
+    <property name="layoutMargin" stdset="0">
+    </property>
+    <property name="layoutSpacing" stdset="0">
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>10</number>
+        </property>
+        <property name="spacing">
+            <number>5</number>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>Layout59</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QGroupBox" row="1" column="1">
+                    <property name="name">
+                        <cstring>GroupBox7</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="title">
+                        <string>Misc</string>
+                    </property>
+                    <property name="layoutMargin" stdset="0">
+                    </property>
+                    <property name="layoutSpacing" stdset="0">
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>10</number>
+                        </property>
+                        <property name="spacing">
+                            <number>5</number>
+                        </property>
+                        <widget class="QLayoutWidget" row="0" column="0">
+                            <property name="name">
+                                <cstring>Layout57</cstring>
+                            </property>
+                            <property name="layoutSpacing" stdset="0">
+                            </property>
+                            <grid>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>5</number>
+                                </property>
+                                <widget class="QLabel" row="1" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel9</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Force address:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="1" column="1">
+                                    <property name="name">
+                                        <cstring>forceAddressEdit</cstring>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>LineEditPanel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="0" column="1">
+                                    <property name="name">
+                                        <cstring>areaCodeEdit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; inserts the area code between the dial prefix and the phone number. In general, you will probably wish to leave this out for dialing from home and put into a Area Code string any additional characters you may need to dial remotely. In most of North America, your Phone entry will be 7 digits (555-1234)  and  your  Area  Code  will be 4 digits (1-818). In local areas with multiple area codes, your Phone entry will be 10 digits (818-555-1234) and your Area Code will be 1 digit (1). In most of europe, your Phone entry will not include your city code, and you might want several different sections with  different  "Area Code" entries; one with your city code, another with your country code and  city code, or whatever else you need to do.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="0" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel8</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Area code:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                            </grid>
+                        </widget>
+                    </grid>
+                </widget>
+                <spacer row="2" column="0">
+                    <property name="name">
+                        <cstring>Spacer13</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QGroupBox" row="1" column="0">
+                    <property name="name">
+                        <cstring>GroupBox6</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="title">
+                        <string>Flags</string>
+                    </property>
+                    <property name="layoutMargin" stdset="0">
+                    </property>
+                    <property name="layoutSpacing" stdset="0">
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>The checkboxes for the flags are tri-state buttons. The meaning of the three button states are:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Off&lt;/b&gt; Override Defaults with off&lt;/li&gt;&lt;li&gt;&lt;b&gt;Default&lt;/b&gt; Take default value or inherit from Defaults&lt;/li&gt;&lt;li&gt;&lt;b&gt;On&lt;/b&gt; Override Defaults with on&lt;/li&gt;&lt;/ul&gt;</string>
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>10</number>
+                        </property>
+                        <property name="spacing">
+                            <number>5</number>
+                        </property>
+                        <widget class="QLayoutWidget" row="0" column="0">
+                            <property name="name">
+                                <cstring>Layout54</cstring>
+                            </property>
+                            <property name="layoutSpacing" stdset="0">
+                            </property>
+                            <grid>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>5</number>
+                                </property>
+                                <spacer row="1" column="3">
+                                    <property name="name">
+                                        <cstring>Spacer4</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QCheckBox" row="0" column="4">
+                                    <property name="name">
+                                        <cstring>tonlineBut</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Tonline</string>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>true</bool>
+                                    </property>
+                                </widget>
+                                <spacer row="2" column="1" rowspan="1" colspan="3">
+                                    <property name="name">
+                                        <cstring>Spacer6</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <spacer row="0" column="5" rowspan="1" colspan="4">
+                                    <property name="name">
+                                        <cstring>Spacer3</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <spacer row="3" column="8">
+                                    <property name="name">
+                                        <cstring>Spacer12</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <spacer row="1" column="7" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>Spacer5</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QCheckBox" row="2" column="4" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>newpppdBut</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>New PPPD</string>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>If you have &lt;b&gt;pppd version 2.3.0&lt;/b&gt; or newer,  you'll need to enable this, because new versions require a file &lt;b&gt;/etc/ppp/peers/wvdial&lt;/b&gt;.  Enabling this option tells &lt;b&gt;pppd&lt;/b&gt; to look for this file.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>compuserveBut</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Compuserve</string>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>true</bool>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox" row="3" column="4" rowspan="1" colspan="4">
+                                    <property name="name">
+                                        <cstring>reconnectBut</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Auto Reconnect</string>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>If enabled, &lt;b&gt;wvdial&lt;/b&gt; will attempt to automatically reestablish a connection if you are randomly disconnected by the other side. This option is "on" by default.</string>
+                                    </property>
+                                </widget>
+                                <spacer row="0" column="2" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>Spacer2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QCheckBox" row="1" column="4" rowspan="1" colspan="3">
+                                    <property name="name">
+                                        <cstring>stupidBut</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Stupid mode</string>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>When wvdial is in Stupid Mode, it does not  attempt to interpret any prompts from the terminal server. It starts pppd immediately after the modem connects. Apparently there are ISP's that actually give you a login prompt, but work only if you start PPP, rather than logging in. Go figure. Stupid Mode is (naturally) disabled by default.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox" row="2" column="0">
+                                    <property name="name">
+                                        <cstring>dnsBut</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Auto DNS</string>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>true</bool>
+                                    </property>
+                                </widget>
+                                <spacer row="2" column="6" rowspan="1" colspan="3">
+                                    <property name="name">
+                                        <cstring>Spacer10</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QCheckBox" row="1" column="0" rowspan="1" colspan="3">
+                                    <property name="name">
+                                        <cstring>isdnBut</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>ISDN supported</string>
+                                    </property>
+                                    <property name="tristate">
+                                        <bool>true</bool>
+                                    </property>
+                                </widget>
+                            </grid>
+                        </widget>
+                    </grid>
+                </widget>
+                <widget class="QGroupBox" row="0" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>GroupBox5</cstring>
+                    </property>
+                    <property name="title">
+                        <string>Modem settings</string>
+                    </property>
+                    <property name="layoutMargin" stdset="0">
+                    </property>
+                    <property name="layoutSpacing" stdset="0">
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>10</number>
+                        </property>
+                        <property name="spacing">
+                            <number>5</number>
+                        </property>
+                        <widget class="QLayoutWidget" row="0" column="0">
+                            <property name="name">
+                                <cstring>Layout52</cstring>
+                            </property>
+                            <property name="layoutSpacing" stdset="0">
+                            </property>
+                            <grid>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>5</number>
+                                </property>
+                                <widget class="QLabel" row="2" column="3">
+                                    <property name="name">
+                                        <cstring>TextLabel5_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init3:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="4" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel6</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Baud:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="1" column="4">
+                                    <property name="name">
+                                        <cstring>init2Edit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="1" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Modem name:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="0" column="1" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>modemEdit</cstring>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>150</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="text">
+                                        <string>/dev/modem</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>The location of the device that &lt;b&gt;wvdial&lt;/b&gt; should use as your modem. The default is &lt;b&gt;/dev/modem&lt;/b&gt;.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="4" column="3">
+                                    <property name="name">
+                                        <cstring>TextLabel5_2_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init5:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="3" column="4">
+                                    <property name="name">
+                                        <cstring>init4Edit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="2" column="4">
+                                    <property name="name">
+                                        <cstring>init3Edit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="2" column="1" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>modemTypeEdit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>A descriptive string for your modem</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="1" column="3">
+                                    <property name="name">
+                                        <cstring>TextLabel5</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init2:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="3" column="5">
+                                    <property name="name">
+                                        <cstring>TextLabel5_2_5_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init9:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="0" column="5">
+                                    <property name="name">
+                                        <cstring>TextLabel5_2_3</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init6:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="3" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel7</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Dial command:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QComboBox" row="4" column="1">
+                                    <item>
+                                        <property name="text">
+                                            <string>Default</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>460800</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>230400</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>115200</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>57600</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>38400</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>19200</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>9600</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>2400</string>
+                                        </property>
+                                    </item>
+                                    <property name="name">
+                                        <cstring>baudCombo</cstring>
+                                    </property>
+                                    <property name="currentItem">
+                                        <number>3</number>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>The speed at which &lt;b&gt;wvdial&lt;/b&gt; will communicate with your modem. The default is 57600 baud.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="4" column="4">
+                                    <property name="name">
+                                        <cstring>init5Edit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="2" column="5">
+                                    <property name="name">
+                                        <cstring>TextLabel5_2_5</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init8:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="1" column="5">
+                                    <property name="name">
+                                        <cstring>TextLabel5_2_4</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init7:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="3" column="6">
+                                    <property name="name">
+                                        <cstring>init9Edit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="0" column="3">
+                                    <property name="name">
+                                        <cstring>TextLabel4</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init1:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="2" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel3</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Modem type:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="1" column="6">
+                                    <property name="name">
+                                        <cstring>init7Edit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="3" column="3">
+                                    <property name="name">
+                                        <cstring>TextLabel5_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Init4:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="2" column="6">
+                                    <property name="name">
+                                        <cstring>init8Edit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="0" column="4">
+                                    <property name="name">
+                                        <cstring>init1Edit</cstring>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>120</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="text">
+                                        <string>ATZ</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="0" column="6">
+                                    <property name="name">
+                                        <cstring>init6Edit</cstring>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>120</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; can use up to nine initialization strings to set up your modem. Before dialing, these strings are sent to the modem in numerical order. These are particularly useful when specifying multiple sections. The default is &lt;b&gt;"ATZ"&lt;/b&gt; for Init1.</string>
+                                    </property>
+                                </widget>
+                                <spacer row="4" column="2">
+                                    <property name="name">
+                                        <cstring>Spacer9</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QLabel" row="0" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel1</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Modem:</string>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignRight</set>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="3" column="1" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>dialCommandEdit</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>ATDT</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>&lt;b&gt;wvdial&lt;/b&gt; will use this string to tell the modem to dial. The default is &lt;b&gt;"ATDT"&lt;/b&gt;.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="1" column="1" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>modemNameEdit</cstring>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>The name of your modem. Let's see what &lt;b&gt;wvdialconf&lt;/b&gt; has found ...</string>
+                                    </property>
+                                </widget>
+                            </grid>
+                        </widget>
+                    </grid>
+                </widget>
+                <widget class="QLayoutWidget" row="3" column="0" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>Layout1</cstring>
+                    </property>
+                    <property name="layoutSpacing" stdset="0">
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>5</number>
+                        </property>
+                        <widget class="QToolButton">
+                            <property name="name">
+                                <cstring>helpBut</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>24</width>
+                                    <height>24</height>
+                                </size>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="pixmap">
+                                <pixmap>image0</pixmap>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>Horizontal Spacing2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>okBut</cstring>
+                            </property>
+                            <property name="text">
+                                <string>&amp;OK</string>
+                            </property>
+                            <property name="autoDefault">
+                                <bool>true</bool>
+                            </property>
+                            <property name="default">
+                                <bool>true</bool>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Accept changes and close dialog.</string>
+                            </property>
+                        </widget>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>cancelBut</cstring>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Cancel</string>
+                            </property>
+                            <property name="autoDefault">
+                                <bool>true</bool>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Discard changes and close dialog.</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </grid>
+        </widget>
+    </grid>
+</widget>
+<images>
+    <image name="image0">
+        <data format="PNG" length="678">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b0000026d49444154789cb5d5cf6b14671cc7f1d766677793d454baad1a35e0a1d283a5877af3d6d283d0ab50bc8a67a1d05b0d8807c54b91fec09b4dfe805e4a2f3d5621361e6cd3a0d598a834b555a2898999243bd9ec6c0fcf242ed909bb50fcc230f30cf3bce7f37c9eeff7fbf09aa2b0fdc5f8b9e315542697e777cd3eaa9616d38152523f584b871e3593a8d0ec4beb1b51f4fe4a7165616bce7723dfaf7c71fad4aecdf1575747e236f0b628a28cdeecde830d24d95547da95e296f765d5e18f45fb3ed733701c3493e736e6ae59f979446dec0e16b09afdac4d515e54ecfdf61bd1fecb0a95c3af7e17f52bee3ea27ce453f5d9698db925d432e5cd4ee0a2eaf027a2fd97411ac716af5c13ff38a934f486e23bbb154abd0afd836ae3f7b094a96eb4427a72c09162f5b3add1ea2fb39289e71a4fa62c5c1a95c63128bffb01dec31e54b643f2c1a2a1ad51fcc36ddcc74dfcaaf16226cc1ce8c701bc95078e72c0247f8c6aaecd48e341dcc504eea0a9505e6bf9b22f83b6599a07def0f2ea75fc8d2ad6f1179654cf9e14ed3b06d66e3cf46ae3da522e1fcc22663235296ade3e7f42e9d0d7205d5e15ff34897ff142c8e98ee086b0cb8990cf45d52f3f523a7405ac4f3fb03432a1f1e4bee0fd5ca6bc2358a6727379bda2836702f4c194850b63788a494c615eb0a32b706b1449c3e6241377f1187fe236fec956d7e671a75e016fe2303ec45e3ccbd44e0bc591db2bba515c30387a0bd41fff6e7ef862064c7682925f20dba3b4f5d45cef132aaddfce7da66b708b5dcd82b0ca1e1d6cecc6e3aad0138e6240c8dddf84a289779ad48dc76b4226348466bf2ce4eefaff55dc7a8a6c9e203b96f26b8fff00b2cbcd004f43b7710000000049454e44ae426082</data>
+    </image>
+</images>
+<tabstops>
+    <tabstop>modemEdit</tabstop>
+    <tabstop>modemNameEdit</tabstop>
+    <tabstop>modemTypeEdit</tabstop>
+    <tabstop>dialCommandEdit</tabstop>
+    <tabstop>baudCombo</tabstop>
+    <tabstop>init1Edit</tabstop>
+    <tabstop>init2Edit</tabstop>
+    <tabstop>init3Edit</tabstop>
+    <tabstop>init4Edit</tabstop>
+    <tabstop>init5Edit</tabstop>
+    <tabstop>init6Edit</tabstop>
+    <tabstop>init7Edit</tabstop>
+    <tabstop>init8Edit</tabstop>
+    <tabstop>init9Edit</tabstop>
+    <tabstop>compuserveBut</tabstop>
+    <tabstop>tonlineBut</tabstop>
+    <tabstop>isdnBut</tabstop>
+    <tabstop>stupidBut</tabstop>
+    <tabstop>dnsBut</tabstop>
+    <tabstop>newpppdBut</tabstop>
+    <tabstop>reconnectBut</tabstop>
+    <tabstop>areaCodeEdit</tabstop>
+    <tabstop>forceAddressEdit</tabstop>
+    <tabstop>helpBut</tabstop>
+    <tabstop>okBut</tabstop>
+    <tabstop>cancelBut</tabstop>
+</tabstops>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

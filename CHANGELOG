@@ -1,0 +1,43 @@
+11/05/2000 Initial release version 0.1
+
+11/11/2000 Version 0.2
+           - Added remote IP label
+           - Added "uptime" label
+           - PPP throughput graph resizeable
+           - A bit more compact mainwindow layout
+           - Better handling of wvdial's default parameter 
+             (tristate checkboxes for flags in expert dialog
+             and default value for baud)
+           - Some minor internal cleanup
+           - Consitency check for new account name
+           - Added some config options for GUI
+           - Removed Language combo (makes no sense -> will use $LANG)
+           - Removed Style combo (makes no sense -> use -style argument)
+           - Added configure script
+
+11/19/2000 Version 0.3
+           - Added monthly logfile
+
+23/19/2000 Version 0.3.1
+           - Fixed silly omission in *.pro files
+           - Fixed bug in configure script
+
+18/07/2004 Version 0.4
+           - Made QtWvDialer compile with Qt-3.x
+           - some chrome
+
+19/07/2004 Version 0.4.1
+           - Improved logfile viewer
+
+26/07/2004 Version 0.4.2
+           - Mainwindow usability
+           - Removed copyright window
+             (is page in config dialog now)
+           - made graph reflect connection state
+
+16/10/2004 Version 0.4.3
+           - Typo in email address (AUTHORS file)
+           - Reflect usage of Qt3.x in INSTALL
+
+04/02/2007 Version 0.4.4
+           - Fixed configure script

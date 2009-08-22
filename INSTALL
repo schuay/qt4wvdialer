@@ -1,0 +1,25 @@
+Requirements:
+-------------
+- Qt library >= 3.0 <http://www.trolltech.com>
+- wvdial and wvdialconf <http://www.worldvisions.ca/wvdial>
+
+Compilation:
+------------
+Make shure QTDIR is set correctly and you have a development version of Qt installed. 
+
+- untar the tarball you've downloaded
+- enter the qtwvdialer directory
+- type ./configure
+- type make 
+
+That's it. You should have the executable qtwvdialer now.
+
+To run QtWvDialer as normal user you could 'chmod +s /usr/loca/bin/wvdial' and 
+'chmod +xs /usr/sbin/pppd' (Your path may differ. A 'which pppd' and 'which wvdial'
+as root should show you the path used on your system)
+
+If you encounter any problems don't hesitate to contact me <qtwvdialer@mtoussaint.de>
+
+The build process has been tested until now only with Linux and Qt-3.3.2. It would be
+nice to hear if QtWvDialer compiles and works with different system configurations.
+ 

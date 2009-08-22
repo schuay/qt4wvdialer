@@ -1,0 +1,764 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>WVDialerDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>wvdialerdlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>459</width>
+            <height>175</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>3</hsizetype>
+            <vsizetype>3</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>QtWvDialer (c) 2000-2007 M. Toussaint</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>false</bool>
+    </property>
+    <property name="layoutMargin" stdset="0">
+    </property>
+    <property name="layoutSpacing" stdset="0">
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>2</number>
+        </property>
+        <property name="spacing">
+            <number>2</number>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0">
+            <property name="name">
+                <cstring>Layout67</cstring>
+            </property>
+            <property name="layoutSpacing" stdset="0">
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>5</number>
+                </property>
+                <widget class="QComboBox">
+                    <property name="name">
+                        <cstring>providerCombo</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>110</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="autoResize">
+                        <bool>true</bool>
+                    </property>
+                    <property name="sizeLimit">
+                        <number>8</number>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Provider list</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Select one of the preconfigured accounts here and the press &lt;b&gt;Connect&lt;/b&gt;.</string>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>connectBut</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Connect</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+C</string>
+                    </property>
+                    <property name="autoResize">
+                        <bool>true</bool>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>false</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Connect / Disconnect </string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Clicking this button connects/disconnects your PPP connection.</string>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name">
+                        <cstring>Spacer1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>MinimumExpanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>Layout66</cstring>
+                    </property>
+                    <property name="layoutSpacing" stdset="0">
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <widget class="QToolButton">
+                            <property name="name">
+                                <cstring>configBut</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>24</width>
+                                    <height>24</height>
+                                </size>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Config</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+C</string>
+                            </property>
+                            <property name="autoResize">
+                                <bool>false</bool>
+                            </property>
+                            <property name="iconSet">
+                                <iconset></iconset>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Configure QtWvDial</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Here you can configure wvdial and the GUI of QtWvDial.&lt;br&gt;Clicking this button opens a configuration dialog with three pages:&lt;ul&gt;&lt;li&gt;&lt;b&gt;Modem:&lt;/b&gt; Here you can configure the modem settings. This is done automatically by wvdialconf &lt;i&gt;(see man wvdialconf)&lt;/i&gt;.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Account:&lt;/b&gt; Here you can configure your accounts &lt;i&gt;(phone number, user name, etc.)&lt;/i&gt;.&lt;/li&gt;&lt;li&gt;&lt;b&gt;QtWvDial:&lt;/b&gt; Here you can change some settings for the QtWvDial GUI.&lt;/li&gt;&lt;/ul&gt;</string>
+                            </property>
+                        </widget>
+                        <widget class="QToolButton">
+                            <property name="name">
+                                <cstring>helpBut</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>24</width>
+                                    <height>24</height>
+                                </size>
+                            </property>
+                            <property name="text">
+                                <string></string>
+                            </property>
+                            <property name="iconSet">
+                                <iconset>image0</iconset>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Direct help</string>
+                            </property>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>PixmapLabel1</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>1</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>15</width>
+                                    <height>0</height>
+                                </size>
+                            </property>
+                            <property name="maximumSize">
+                                <size>
+                                    <width>15</width>
+                                    <height>32767</height>
+                                </size>
+                            </property>
+                            <property name="scaledContents">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QToolButton">
+                            <property name="name">
+                                <cstring>quitBut</cstring>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>0</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>24</width>
+                                    <height>24</height>
+                                </size>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Quit</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+Q</string>
+                            </property>
+                            <property name="autoResize">
+                                <bool>false</bool>
+                            </property>
+                            <property name="iconSet">
+                                <iconset></iconset>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Quit program</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Here you can quit the program. The current connection is terminated before quitting the program.</string>
+                            </property>
+                        </widget>
+                    </hbox>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QListBox" row="1" column="0">
+            <property name="name">
+                <cstring>output</cstring>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>0</width>
+                    <height>60</height>
+                </size>
+            </property>
+            <property name="frameShape">
+                <enum>StyledPanel</enum>
+            </property>
+            <property name="lineWidth">
+                <number>2</number>
+            </property>
+            <property name="selectionMode">
+                <enum>NoSelection</enum>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string>Here you'll find the output of &lt;i&gt;wvdial&lt;/i&gt; and additional messages of &lt;i&gt;wvdialer&lt;/i&gt;.</string>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget" row="2" column="0">
+            <property name="name">
+                <cstring>Layout11</cstring>
+            </property>
+            <property name="layoutSpacing" stdset="0">
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>0</number>
+                </property>
+                <widget class="QLayoutWidget">
+                    <property name="name">
+                        <cstring>Layout10</cstring>
+                    </property>
+                    <property name="layoutSpacing" stdset="0">
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <property name="spacing">
+                            <number>0</number>
+                        </property>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>Layout7</cstring>
+                            </property>
+                            <property name="layoutSpacing" stdset="0">
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>0</number>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>rxLabel</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>90</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>10</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>Panel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string>RX: 0 bytes</string>
+                                    </property>
+                                    <property name="textFormat">
+                                        <enum>PlainText</enum>
+                                    </property>
+                                    <property name="indent">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="toolTip" stdset="0">
+                                        <string>Received bytes</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>This label shows you the total amount of &lt;b&gt;recieved&lt;/b&gt; bytes during your current session.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>rxPS</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>70</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>70</width>
+                                            <height>32767</height>
+                                        </size>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>10</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>Panel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string>0.00 KB/s</string>
+                                    </property>
+                                    <property name="textFormat">
+                                        <enum>PlainText</enum>
+                                    </property>
+                                    <property name="indent">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="toolTip" stdset="0">
+                                        <string>Receive throughput</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>This label shows you the current receive throughput.</string>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>Layout8</cstring>
+                            </property>
+                            <property name="layoutSpacing" stdset="0">
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>0</number>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>txLabel</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>90</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>10</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>Panel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string>TX: 0 bytes</string>
+                                    </property>
+                                    <property name="textFormat">
+                                        <enum>PlainText</enum>
+                                    </property>
+                                    <property name="indent">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="toolTip" stdset="0">
+                                        <string>Transmitted bytes</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>This label shows you the total amount of &lt;b&gt;transmitted&lt;/b&gt; bytes during your current session.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>txPS</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>70</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>70</width>
+                                            <height>32767</height>
+                                        </size>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>10</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>Panel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string>0.00 KB/s</string>
+                                    </property>
+                                    <property name="textFormat">
+                                        <enum>PlainText</enum>
+                                    </property>
+                                    <property name="indent">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="toolTip" stdset="0">
+                                        <string>Transmit throughput</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>This label shows you the current transmit throughput.</string>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>Layout9</cstring>
+                            </property>
+                            <property name="layoutSpacing" stdset="0">
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>0</number>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>ipLabel</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>90</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>10</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>Panel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string>n/a</string>
+                                    </property>
+                                    <property name="textFormat">
+                                        <enum>PlainText</enum>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignLeft</set>
+                                    </property>
+                                    <property name="indent">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                    <property name="toolTip" stdset="0">
+                                        <string>Remote IP address</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>This label shows you your remote IP address.</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>upLabel</cstring>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>0</hsizetype>
+                                            <vsizetype>1</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="minimumSize">
+                                        <size>
+                                            <width>70</width>
+                                            <height>0</height>
+                                        </size>
+                                    </property>
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>70</width>
+                                            <height>32767</height>
+                                        </size>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                            <pointsize>10</pointsize>
+                                        </font>
+                                    </property>
+                                    <property name="frameShape">
+                                        <enum>Panel</enum>
+                                    </property>
+                                    <property name="frameShadow">
+                                        <enum>Sunken</enum>
+                                    </property>
+                                    <property name="text">
+                                        <string>00:00</string>
+                                    </property>
+                                    <property name="textFormat">
+                                        <enum>PlainText</enum>
+                                    </property>
+                                    <property name="alignment">
+                                        <set>AlignVCenter|AlignLeft</set>
+                                    </property>
+                                    <property name="indent">
+                                        <number>2</number>
+                                    </property>
+                                    <property name="hAlign" stdset="0">
+                                    </property>
+                                    <property name="toolTip" stdset="0">
+                                        <string>Connection time</string>
+                                    </property>
+                                    <property name="whatsThis" stdset="0">
+                                        <string>This label shows you the total uptime of your current session. You may connect/disconnect and change account as many times as you want. The time will be accumulated.</string>
+                                    </property>
+                                </widget>
+                            </hbox>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="PPPStatsWid">
+                    <property name="name">
+                        <cstring>statsWid</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>3</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>150</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>PPP throughput graph</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This graph shows you the ppp throughput of your connection in KB/s. The graph is updated every two seconds.&lt;p&gt;The two bars at the right show you the current throughput in a &lt;i&gt;vu meter&lt;/i&gt; style&lt;p&gt;Green means received data&lt;br&gt;Red means outgoing data.</string>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </grid>
+</widget>
+<customwidgets>
+    <customwidget>
+        <class>PPPStatsWid</class>
+        <header location="local">pppstatswid.h</header>
+        <sizehint>
+            <width>-1</width>
+            <height>-1</height>
+        </sizehint>
+        <container>0</container>
+        <sizepolicy>
+            <hordata>5</hordata>
+            <verdata>5</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image1</pixmap>
+    </customwidget>
+</customwidgets>
+<images>
+    <image name="image0">
+        <data format="PNG" length="678">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b0000026d49444154388db5d5cf6b14671cc7f1d766677793d454baad1a35e0a1d283a5877af3d6d283d0ab50bc8a67a1d05b0d8807c54b91fec09b4dfe805e4a2f3d5621361e6cd3a0d598a834b555a2898999243bd9ec6c0fcf242ed909bb50fcc230f30cf3bce7f37c9eeff7fbf09aa2b0fdc5f8b9e315542697e777cd3eaa9616d38152523f584b871e3593a8d0ec4beb1b51f4fe4a7165616bce7723dfaf7c71fad4aecdf1575747e236f0b628a28cdeecde830d24d95547da95e296f765d5e18f45fb3ed733701c3493e736e6ae59f979446dec0e16b09afdac4d515e54ecfdf61bd1fecb0a95c3af7e17f52bee3ea27ce453f5d9698db925d432e5cd4ee0a2eaf027a2fd97411ac716af5c13ff38a934f486e23bbb154abd0afd836ae3f7b094a96eb4427a72c09162f5b3add1ea2fb39289e71a4fa62c5c1a95c63128bffb01dec31e54b643f2c1a2a1ad51fcc36ddcc74dfcaaf16226cc1ce8c701bc95078e72c0247f8c6aaecd48e341dcc504eea0a9505e6bf9b22f83b6599a07def0f2ea75fc8d2ad6f1179654cf9e14ed3b06d66e3cf46ae3da522e1fcc22663235296ade3e7f42e9d0d7205d5e15ff34897ff142c8e98ee086b0cb8990cf45d52f3f523a7405ac4f3fb03432a1f1e4bee0fd5ca6bc2358a6727379bda2836702f4c194850b63788a494c615eb0a32b706b1449c3e6241377f1187fe236fec956d7e671a75e016fe2303ec45e3ccbd44e0bc591db2bba515c30387a0bd41fff6e7ef862064c7682925f20dba3b4f5d45cef132aaddfce7da66b708b5dcd82b0ca1e1d6cecc6e3aad0138e6240c8dddf84a289779ad48dc76b4226348466bf2ce4eefaff55dc7a8a6c9e203b96f26b8fff00b2cbcd00c45de95e0000000049454e44ae426082</data>
+    </image>
+    <image name="image1">
+        <data format="PNG" length="258">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000000c949444154388dad55c91183300c8c341440136e862ed3842b60dc04bd405e62b0b23aec645f0c927675d9a6d6dacbc3716e17fa5fb89217b78c90211f4b806748b53f8a61ed3442eac52e964160958afc8f73bbc4ffab1519d2c8761323752fd01b9cd860c619d2682be8bdaf5db61952e4af6d6e8fb3a408f080448419a433d6486d85052fdba812d6ca7aeab3c266c6a8546b6fb540e14a9018eda87c47bded32f64e50e14ada9e219f1e9e0511a5e70bf2cbb5a9d1659ceddf30b1908f0aa019d03f1fd3e745ff01fb6c8d994fda162e0000000049454e44ae426082</data>
+    </image>
+</images>
+<tabstops>
+    <tabstop>providerCombo</tabstop>
+    <tabstop>connectBut</tabstop>
+    <tabstop>configBut</tabstop>
+    <tabstop>helpBut</tabstop>
+    <tabstop>quitBut</tabstop>
+    <tabstop>output</tabstop>
+</tabstops>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>pppstatswid.h</includehint>
+</includehints>
+</UI>
