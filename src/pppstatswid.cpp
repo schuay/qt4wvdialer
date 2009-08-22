@@ -21,6 +21,10 @@
 #include <pppstatswid.h>
 #include <qpainter.h>
 #include <qdrawutil.h>
+//Added by qt3to4:
+#include <QResizeEvent>
+#include <QTimerEvent>
+#include <QPaintEvent>
 #include <iostream>
 
 PPPStatsWid::PPPStatsWid( QWidget *parent, const char *name ) :
@@ -36,7 +40,7 @@ PPPStatsWid::PPPStatsWid( QWidget *parent, const char *name ) :
   hist(0),
   m_online( false )
 {
-  setBackgroundMode( NoBackground );
+  setBackgroundMode( Qt::NoBackground );
   startTimer( 500 );
 }
 
@@ -140,7 +144,7 @@ PPPStatsWid::paintEvent( QPaintEvent * )
     
     if (tmp-tmp2 > 10)
     {
-      p.setPen( QPen( Qt::darkGray, 0, DotLine ) );
+      p.setPen( QPen( Qt::darkGray, 0, Qt::DotLine ) );
       p.drawLine( 20, (height()-2)-tmp, width(), (height()-2)-tmp );
       QString tmpStr;
       tmpStr.sprintf( "%d", i );

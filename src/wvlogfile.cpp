@@ -20,7 +20,7 @@
 
 #include <wvlogfile.h>
 #include <qfile.h>
-#include <qtextstream.h>
+#include <q3textstream.h>
 #include <qdatetime.h>
 #include <qpixmap.h>
 #include <sumitem.h>
@@ -134,13 +134,13 @@ WVLogfileEntry::dataStr( unsigned bytes ) const
 
 WVLogfile::WVLogfile()
 {
-  list.setAutoDelete( true );
+  //list.setAutoDelete( true );
 }
 
 WVLogfile::WVLogfile( const QString & fname ) :
   filename( fname )
 {
-  list.setAutoDelete( true );
+  //list.setAutoDelete( true );
 }
 
 WVLogfile::~WVLogfile()
@@ -154,7 +154,7 @@ WVLogfile::load()
   
   list.clear();
   
-  if (file.open( IO_ReadOnly ))
+  if (file.open( QIODevice::ReadOnly ))
   {
     char *buffer = new char [2000];
     
@@ -166,8 +166,9 @@ WVLogfile::load()
       QString ibytes = strtok( 0, ":" );
       QString obytes = strtok( 0, ":\n" );
       
-      list.append( new WVLogfileEntry( account, start.toUInt(), stop.toUInt(),
-                                       ibytes.toUInt(), obytes.toUInt() ));
+      WVLogfileEntry* lfe = new WVLogfileEntry( account, start.toUInt(), stop.toUInt(),
+                                       ibytes.toUInt(), obytes.toUInt() );
+      list.append( lfe );
     }
     
     delete [] buffer;
@@ -191,9 +192,9 @@ WVLogfile::append( const QString & account, unsigned start,
   
   QFile file( filename );
   
-  if (file.open( IO_WriteOnly | IO_Append ))
+  if (file.open( QIODevice::WriteOnly | QIODevice::Append ))
   {
-    QTextStream s( &file );
+    Q3TextStream s( &file );
     
     s << entry->logLine();
     
@@ -204,26 +205,27 @@ WVLogfile::append( const QString & account, unsigned start,
 }
 
 void
-WVLogfile::fillList( QListView * lv ) const
+WVLogfile::fillList( Q3ListView * lv ) const
 {
   lv->clear();
   lv->setUpdatesEnabled( false );
   
-  QListIterator<WVLogfileEntry> it(list);
+  QListIterator<WVLogfileEntry *> it(list);
   WVLogfileEntry *entry;
   
   unsigned duration=0, upload=0, download=0;
   int providerCnt = 0;
   
-  it.toLast();
+  it.toBack();
   
-  while ((entry = it.current()))
+  while (it.hasNext())
   {
+    entry = it.next();
     // search parent, create if it does not exist yet
     //
     SumItem *parent=0;
     
-    for (QListViewItem *item=lv->firstChild(); item; item=item->nextSibling())
+    for (Q3ListViewItem *item=lv->firstChild(); item; item=item->nextSibling())
     {
       if (item->text(0) == entry->account())
       {
@@ -240,9 +242,9 @@ WVLogfile::fillList( QListView * lv ) const
       parent->setPixmap( 0, *providerPix() );
     }
     
-    QListViewItem *connection = new QListViewItem( parent, 
+    Q3ListViewItem *connection = new Q3ListViewItem( parent, 
                        "", entry->day(), entry->startTime(),
-                       entry->durationStr(), entry->downloadStr(), 
+                       entry->durationStr(), entry->downloadStr(),
                        entry->uploadStr() );
     connection->setPixmap( 0, *connectionPix() );
     
@@ -253,8 +255,6 @@ WVLogfile::fillList( QListView * lv ) const
     duration += entry->duration();
     upload += entry->upload();
     download += entry->download();
-    
-    --it;
   }
   
   // show total sum if more than one provider

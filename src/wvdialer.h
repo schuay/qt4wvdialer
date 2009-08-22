@@ -23,9 +23,12 @@
 
 #include <wvdialerdlg.h>
 #include <qpushbutton.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <qcombobox.h>
-#include <qprocess.h>
+#include <q3process.h>
+//Added by qt3to4:
+#include <QTimerEvent>
+#include <QCloseEvent>
 #include <pppstats.h>
 #include <qlabel.h>
 #include <pppstatswid.h>
@@ -55,8 +58,8 @@ protected slots:
   void readStderrSLOT();
   
 protected:
-  QProcess     *wvdial;
-  QProcess     *startProcess;
+  Q3Process     *wvdial;
+  Q3Process     *startProcess;
   PPPStats     *stats;
   QPixmap       errPix;
   bool          exitFlag;

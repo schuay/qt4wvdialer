@@ -24,7 +24,12 @@
 #include <qmessagebox.h>
 #include <qstringlist.h>
 #include <qtoolbutton.h>
-#include <qwhatsthis.h>
+#include <q3whatsthis.h>
+//Added by qt3to4:
+#include <QCloseEvent>
+#include <QTimerEvent>
+#include <QPixmap>
+#include <QDateTime>
 
 #include <simplecfg.h>
 #include <stdlib.h>
@@ -55,8 +60,8 @@ WVDialer::WVDialer( QWidget *parent, const char *name ) :
   
   loadConfig();
   
-  wvdial = new QProcess( this );
-  startProcess = new QProcess( this );
+  wvdial = new Q3Process( this );
+  startProcess = new Q3Process( this );
   
   stats = new PPPStats();
   
@@ -200,7 +205,7 @@ WVDialer::outputSLOT( const QString & buf )
 void
 WVDialer::msgSLOT( const QString & line )
 {
-  new QListBoxPixmap( output, errPix, line );
+  new Q3ListBoxPixmap( output, errPix, line );
   
   output->setBottomItem( output->count()-1 );
 }
@@ -343,7 +348,7 @@ WVDialer::closeEvent( QCloseEvent *ev )
 void
 WVDialer::helpSLOT()
 {
-  QWhatsThis::enterWhatsThisMode();
+  Q3WhatsThis::enterWhatsThisMode();
 }
 
 void

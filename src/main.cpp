@@ -18,7 +18,7 @@
 // (c) 2000 Matthias Toussaint
 //======================================================================
 
-#include <qapplication.h>
+#include <QApplication>
 
 #include <wvdialer.h>
 

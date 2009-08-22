@@ -1,8 +1,8 @@
 #include <sumitem.h>
 #include <qpainter.h>
 
-SumItem::SumItem( QListView *list, const QString & str ) :
-  QListViewItem( list, str ),
+SumItem::SumItem( Q3ListView *list, const QString & str ) :
+  Q3ListViewItem( list, str ),
   m_time( 0 ),
   m_upload( 0 ),
   m_download( 0 )
@@ -24,7 +24,7 @@ SumItem::paintCell( QPainter *p, const QColorGroup & cg,
   case 0:
   case 1:
   case 2:
-    QListViewItem::paintCell( p, cg, col, width, align );
+    Q3ListViewItem::paintCell( p, cg, col, width, align );
     break;
     
   case 3:

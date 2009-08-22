@@ -1,12 +1,12 @@
 #ifndef SUMITEM_HH
 #define SUMITEM_HH
 
-#include <qlistview.h>
+#include <q3listview.h>
 
-class SumItem : public QListViewItem
+class SumItem : public Q3ListViewItem
 {
 public:
-  SumItem( QListView *, const QString & );
+  SumItem( Q3ListView *, const QString & );
   virtual ~SumItem();
   
   void addTime( unsigned sec )       { m_time += sec; }

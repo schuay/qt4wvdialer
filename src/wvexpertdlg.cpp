@@ -19,7 +19,7 @@
 //======================================================================
 
 #include <qtoolbutton.h>
-#include <qwhatsthis.h>
+#include <q3whatsthis.h>
 
 #include <wvexpertdlg.h>
 
@@ -73,7 +73,7 @@ WVExpertDlg::~WVExpertDlg()
 void
 WVExpertDlg::helpSLOT()
 {
-  QWhatsThis::enterWhatsThisMode();
+  Q3WhatsThis::enterWhatsThisMode();
 }
 
 void
@@ -170,37 +170,37 @@ WVExpertDlg::writeConfig( const QString & account, SimpleCfg *cfg )
   cfg->setString( account, WV_AREA_CODE, areaCodeEdit->text() );
   cfg->setString( account, WV_FORCE_ADDRESS, forceAddressEdit->text() );
   
-  if (compuserveBut->state() == QButton::NoChange)
+  if (compuserveBut->state() == QCheckBox::NoChange)
     cfg->remove( account, WV_COMPUSERVE );
   else
     cfg->setBool( account, WV_COMPUSERVE, compuserveBut->isChecked() );
   
-  if (tonlineBut->state() == QButton::NoChange)
+  if (tonlineBut->state() == QCheckBox::NoChange)
     cfg->remove( account, WV_TONLINE );
   else
     cfg->setBool( account, WV_TONLINE, tonlineBut->isChecked() );
   
-  if (isdnBut->state() == QButton::NoChange)
+  if (isdnBut->state() == QCheckBox::NoChange)
     cfg->remove( account, WV_ISDN );
   else
     cfg->setBool( account, WV_ISDN, isdnBut->isChecked() );
   
-  if (dnsBut->state() == QButton::NoChange)
+  if (dnsBut->state() == QCheckBox::NoChange)
     cfg->remove( account, WV_AUTO_DNS );
   else
     cfg->setBool( account, WV_AUTO_DNS, dnsBut->isChecked() );
   
-  if (stupidBut->state() == QButton::NoChange)
+  if (stupidBut->state() == QCheckBox::NoChange)
     cfg->remove( account, WV_STUPID_MODE );
   else
     cfg->setBool( account, WV_STUPID_MODE, stupidBut->isChecked() );
   
-  if (newpppdBut->state() == QButton::NoChange)
+  if (newpppdBut->state() == QCheckBox::NoChange)
     cfg->remove( account, WV_NEW_PPPD );
   else
     cfg->setBool( account, WV_NEW_PPPD, newpppdBut->isChecked() );
   
-  if (reconnectBut->state() == QButton::NoChange)
+  if (reconnectBut->state() == QCheckBox::NoChange)
     cfg->remove( account, WV_AUTO_RECONNECT );
   else
     cfg->setBool( account, WV_AUTO_RECONNECT, reconnectBut->isChecked() );

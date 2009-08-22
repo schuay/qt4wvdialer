@@ -21,8 +21,11 @@
 #ifndef WVLOGFILE_HH
 #define WVLOGFILE_HH
 
-#include <qlistview.h>
-#include <qglist.h>
+#include <q3listview.h>
+#include <q3glist.h>
+#include <QList>
+//Added by qt3to4:
+#include <QPixmap>
 
 class WVLogfileEntry
 {
@@ -65,7 +68,7 @@ public:
   int year() const;
   int month() const;
   
-  void fillList( QListView * list ) const;
+  void fillList( Q3ListView * list ) const;
   
   void append( const QString & account, unsigned start,
                unsigned stop, unsigned ibytes, unsigned obytes );
@@ -75,7 +78,7 @@ public:
   
 protected:
   QString               filename;
-  QList<WVLogfileEntry> list;
+  QList<WVLogfileEntry *> list;
   
   QPixmap *providerPix() const;
   QPixmap *connectionPix() const;

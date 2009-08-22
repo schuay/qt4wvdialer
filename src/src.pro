@@ -18,7 +18,8 @@ HEADERS   = wvdialer.h \
             wvlogfile.h \
             sumitem.h 
 
-INTERFACES = wvdialerdlg.ui \
+#The following line was changed from INTERFACES to FORMS3 by qt3to4
+FORMS3 = wvdialerdlg.ui \
              configdlg.ui \
              providernamedlg.ui \
              expertdlg.ui 
@@ -37,4 +38,9 @@ SOURCES   = main.cpp \
 TARGET    = qtwvdialer
 VERSION   = 0.4.4
 DESTDIR   = ../bin
+
+#The following line was inserted by qt3to4
+QT +=  qt3support 
+#The following line was inserted by qt3to4
+CONFIG += uic3
 

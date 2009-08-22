@@ -21,7 +21,9 @@
 #ifndef PPPSTATS_HH
 #define PPPSTATS_HH
 
-#include <qobject.h>
+#include <QObject>
+//Added by qt3to4:
+#include <QTimerEvent>
 
 class PPPStats : public QObject 
 {

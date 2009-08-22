@@ -18,10 +18,10 @@
 // (c) 2000 Matthias Toussaint
 //======================================================================
 
-#include <qfiledialog.h>
+#include <q3filedialog.h>
 #include <qmessagebox.h>
 #include <qtoolbutton.h>
-#include <qwhatsthis.h>
+#include <q3whatsthis.h>
 
 #include <stdlib.h>
 #include <wvconfigdlg.h>
@@ -47,7 +47,7 @@ WVConfigDlg::WVConfigDlg( QWidget *parent, const char *name ) :
   providerName = new WVProviderNameDlg( this, "NAME" );
   providerName->hide();
 
-  wvdialconf = new QProcess( this );
+  wvdialconf = new Q3Process( this );
   QStringList args;
   args.append( "wvdialconf" );
   args.append( confPath );
@@ -136,7 +136,7 @@ WVConfigDlg::show()
   //
   QFile file( confPath );
   
-  if (file.open( IO_ReadOnly ))
+  if (file.open( QIODevice::ReadOnly ))
   {
     char *buffer = new char [file.size()];
     
@@ -147,7 +147,7 @@ WVConfigDlg::show()
     tmpName += "/wvdial.conf.tmp";
     
     QFile tmp( tmpName );
-    if (tmp.open( IO_WriteOnly ))
+    if (tmp.open( QIODevice::WriteOnly ))
     {
       tmp.writeBlock( buffer, file.size() );
       tmp.close();
@@ -190,7 +190,7 @@ WVConfigDlg::show()
 void
 WVConfigDlg::helpSLOT()
 {
-  QWhatsThis::enterWhatsThisMode();
+  Q3WhatsThis::enterWhatsThisMode();
 }
 
 void
@@ -256,7 +256,7 @@ WVConfigDlg::browseSLOT()
   QString startPath = progPath->text().isEmpty() ? 
       QString( QDir::homeDirPath() ) : progPath->text();
   
-  QString fname = QFileDialog::getOpenFileName( startPath, "*", this, 
+  QString fname = Q3FileDialog::getOpenFileName( startPath, "*", this, 
                       "FSEL", tr( "QtWvDialer: Select program" ) );
   
   if (!fname.isEmpty())
@@ -396,7 +396,7 @@ WVConfigDlg::rejectSLOT()
     
   QFile file( tmpName );
   
-  if (file.open( IO_ReadOnly ))
+  if (file.open( QIODevice::ReadOnly ))
   {
     char *buffer = new char [file.size()];
     
@@ -405,7 +405,7 @@ WVConfigDlg::rejectSLOT()
     
     QFile tmp( confPath );
     
-    if (tmp.open( IO_WriteOnly ))
+    if (tmp.open( QIODevice::WriteOnly ))
     {
       tmp.writeBlock( buffer, file.size() );
       tmp.close();

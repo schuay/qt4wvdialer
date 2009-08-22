@@ -30,6 +30,8 @@
 #include <iostream>
 #include <net/if_ppp.h>
 #include <pppstats.h>
+//Added by qt3to4:
+#include <QTimerEvent>
 
 typedef struct
 {
@@ -88,7 +90,7 @@ PPPStats::start()
 void
 PPPStats::stop()
 {
-  killTimers();
+  stop();
 }
 
 void

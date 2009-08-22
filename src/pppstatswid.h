@@ -21,8 +21,12 @@
 #ifndef PPPSTATSWID_HH
 #define PPPSTATSWID_HH
 
-#include <qwidget.h>
-#include <qpixmap.h>
+#include <QWidget>
+#include <QPixmap>
+//Added by qt3to4:
+#include <QPaintEvent>
+#include <QResizeEvent>
+#include <QTimerEvent>
 
 class PPPStatsWid : public QWidget
 {

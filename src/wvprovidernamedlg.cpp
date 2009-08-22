@@ -19,7 +19,7 @@
 //======================================================================
 
 #include <qtoolbutton.h>
-#include <qwhatsthis.h>
+#include <q3whatsthis.h>
 
 #include <wvprovidernamedlg.h>
 
@@ -41,7 +41,7 @@ WVProviderNameDlg::~WVProviderNameDlg()
 void
 WVProviderNameDlg::helpSLOT()
 {
-  QWhatsThis::enterWhatsThisMode(); 
+  Q3WhatsThis::enterWhatsThisMode(); 
 }
 
 void

@@ -22,9 +22,9 @@
 #define WVCONFIGDLG_HH
 
 #include <configdlg.h>
-
+#include <QDateTime>
 #include <qpushbutton.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <qcombobox.h>
 #include <qlineedit.h>
 #include <qspinbox.h>
@@ -32,7 +32,7 @@
 #include <qcheckbox.h>
 #include <simplecfg.h>
 #include <wvexpertdlg.h>
-#include <qprocess.h>
+#include <q3process.h>
 
 #include <wvprovidernamedlg.h>
 
@@ -96,7 +96,7 @@ protected:
   WVProviderNameDlg *providerName;
   SimpleCfg         *cfg;
   WVExpertDlg       *expertDlg;
-  QProcess          *wvdialconf;
+  Q3Process          *wvdialconf;
   
   void writeCfg( const QString & );
   
