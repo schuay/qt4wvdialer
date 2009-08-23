@@ -36,6 +36,9 @@
 #include <wvconfigdlg.h>
 #include <simplecfg.h>
 #include <wvlogfile.h>
+#include <QSystemTrayIcon>
+#include <QMenu>
+#include <QAction>
 
 class WVDialer : public WVDialerDlg
 {
@@ -82,7 +85,14 @@ protected:
   void setProviderCombo();
   void setGUI();
   void checkOldConfiguration();
-  
+
+private:
+  QIcon *trayIcon;
+  QSystemTrayIcon *tray;
+  QMenu *trayIconMenu;
+  QAction *restoreAction;
+  QAction *quitAction;
+
 };
 
 #endif
