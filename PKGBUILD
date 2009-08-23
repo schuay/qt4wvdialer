@@ -28,6 +28,7 @@ build() {
   make || return 1
 
   install -D -m755 bin/qtwvdialer $pkgdir/usr/bin/qtwvdialer
+  install -D -m644 src/qtwvdialer.png $pkgdir/usr/share/icons/hicolor/32x32/
   install -D -m644 $startdir/$_pkgname.desktop $pkgdir/usr/share/applications/$_pkgname.desktop
 }
 

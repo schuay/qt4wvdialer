@@ -84,7 +84,6 @@
     <value type="QString" >KDE_SESSION_UID=1000</value>
     <value type="QString" >KDE_SESSION_VERSION=4</value>
     <value type="QString" >LANG=en_US.utf8</value>
-    <value type="QString" >LANGUAGE=</value>
     <value type="QString" >LC_COLLATE=C</value>
     <value type="QString" >LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString" >LESS=-R</value>
@@ -131,7 +130,7 @@
     <value type="QString" >CONFIG+=debug</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >/usr/bin/qmake</value>
-   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
    <value key="abstractProcess.workingDirectory" type="QString" >/home/jakob/qt4wvdialer</value>
    <value key="buildConfiguration" type="int" >2</value>
   </valuemap>
@@ -164,7 +163,6 @@
     <value type="QString" >KDE_SESSION_UID=1000</value>
     <value type="QString" >KDE_SESSION_VERSION=4</value>
     <value type="QString" >LANG=en_US.utf8</value>
-    <value type="QString" >LANGUAGE=</value>
     <value type="QString" >LC_COLLATE=C</value>
     <value type="QString" >LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString" >LESS=-R</value>

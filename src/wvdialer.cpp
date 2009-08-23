@@ -52,9 +52,9 @@ WVDialer::WVDialer( QWidget *parent, const char *name ) :
 {  
   checkOldConfiguration();
 
-  if (QFile::exists("/usr/share/icons/hicolor/32x32/network-wireless.png"))
+  if (QFile::exists("/usr/share/icons/hicolor/32x32/qtwvdialer.png"))
   {
-    trayIcon = new QIcon("/usr/share/icons/hicolor/32x32/network-wireless.png");
+    trayIcon = new QIcon("/usr/share/icons/hicolor/32x32/qtwvdialer.png");
     this->setWindowIcon(*trayIcon);
     initializeTray();
   }
