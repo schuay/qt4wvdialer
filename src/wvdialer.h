@@ -85,6 +85,7 @@ protected:
   void setProviderCombo();
   void setGUI();
   void checkOldConfiguration();
+  void initializeTray();
 
 private:
   QIcon *trayIcon;

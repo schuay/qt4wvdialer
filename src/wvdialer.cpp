@@ -46,28 +46,18 @@ WVDialer::WVDialer( QWidget *parent, const char *name ) :
   upTimer( -1 ),
   delayTimer( -1 ),
   upTime( 0 ),
-  pppUp( false )
+  pppUp( false ),
+  trayIcon(NULL),
+  tray(NULL)
 {  
   checkOldConfiguration();
 
-  trayIcon = new QIcon("/home/jakob/qt4wvdialer/src/network-wireless.png");
-  tray = new QSystemTrayIcon(*trayIcon,this);
-  this->setWindowIcon(*trayIcon);
-
-  restoreAction = new QAction(tr("&Restore"), this);
-  connect(restoreAction, SIGNAL(triggered()), this, SLOT(showNormal()));
-
-  quitAction = new QAction(tr("&Quit"), this);
-  connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
-
-  trayIconMenu = new QMenu(this);
-  trayIconMenu->addAction(restoreAction);
-  trayIconMenu->addAction(quitAction);
-
-  tray->setContextMenu(trayIconMenu);
-
-
-  tray->show();
+  if (QFile::exists("/usr/share/icons/hicolor/32x32/network-wireless.png"))
+  {
+    trayIcon = new QIcon("/usr/share/icons/hicolor/32x32/network-wireless.png");
+    this->setWindowIcon(*trayIcon);
+    initializeTray();
+  }
   
   QString fname = QDir::homeDirPath();
   fname += "/.qtwvdialer/settings";  
@@ -169,7 +159,6 @@ WVDialer::connectSLOT()
 void
 WVDialer::quitSLOT()
 {
-    this->hide();
   if (wvdial->isRunning())
   {
     if (askShutdown() == 0)
@@ -348,9 +337,12 @@ WVDialer::exitedSLOT()
 void
 WVDialer::closeEvent( QCloseEvent *ev )
 {
+  //if tray is initialized, hide window. otherwise, default to normal exit behavior
+  if (tray) {
     this->hide();
     ev->ignore();
-  /*if (wvdial->isRunning())
+  }
+  else if (wvdial->isRunning())
   {
     if (askShutdown() == 0)
     {
@@ -365,7 +357,7 @@ WVDialer::closeEvent( QCloseEvent *ev )
   else
   {    
     ev->accept();
-  }*/
+  }
 }    
   
 void
@@ -630,6 +622,28 @@ WVDialer::checkOldConfiguration()
   }
 }
 
+void
+WVDialer::initializeTray()
+{
+  if (QSystemTrayIcon::isSystemTrayAvailable() )
+  {
+      tray = new QSystemTrayIcon(*trayIcon,this);
+
+      restoreAction = new QAction(tr("&Restore"), this);
+      connect(restoreAction, SIGNAL(triggered()), this, SLOT(showNormal()));
+
+      quitAction = new QAction(tr("&Quit"), this);
+      connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
+
+      trayIconMenu = new QMenu(this);
+      trayIconMenu->addAction(restoreAction);
+      trayIconMenu->addAction(quitAction);
+
+      tray->setContextMenu(trayIconMenu);
+
+      tray->show();
+  }
+}
   
   
   
