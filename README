@@ -1,5 +1,5 @@
 QtWvDialer is a  simple graphical front-end  to wvdial and it's  free 
-software. You need the Qt library version 3.0.0 or better and wvdial. 
+software. You need the Qt library version 4.0.0 or better and wvdial. 
 It provides you with  a easy to use GUI  to fire up a ppp connection. 
 Additionally  you  have  access  to the  output of  wvdial,  some PPP 
 statistics  a monthly  log of  your connections  and a editor for the 
@@ -8,7 +8,7 @@ extracted from the very fine program kpppload from Sean Vyain. Thanks
 Sean, for this nice piece of GPL'ed code!
 
 QtWvDialer is kind of "works for me" software. I'm using it, I like it 
-the way it is and it seems  to be quite stable. But I'm shure it still 
+the way it is and it seems to be quite stable. But I'm sure it still 
 contains tons of bugs and outside my box it will crash every second or 
 two. Try it and we will learn more ...
 

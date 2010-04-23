@@ -1,11 +1,11 @@
 Requirements:
 -------------
-- Qt library >= 3.0 <http://www.trolltech.com>
+- Qt library >= 4.0 <http://qt.nokia.com>
 - wvdial and wvdialconf <http://www.worldvisions.ca/wvdial>
 
 Compilation:
 ------------
-Make shure QTDIR is set correctly and you have a development version of Qt installed. 
+Make sure QTDIR is set correctly and you have a development version of Qt installed. 
 
 - untar the tarball you've downloaded
 - enter the qtwvdialer directory
@@ -20,6 +20,6 @@ as root should show you the path used on your system)
 
 If you encounter any problems don't hesitate to contact me <qtwvdialer@mtoussaint.de>
 
-The build process has been tested until now only with Linux and Qt-3.3.2. It would be
+The build process has been tested until now only with Linux and Qt 4.6.2. It would be
 nice to hear if QtWvDialer compiles and works with different system configurations.
  
