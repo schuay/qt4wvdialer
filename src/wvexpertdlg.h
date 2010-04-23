@@ -25,7 +25,7 @@
 #include <qlineedit.h>
 #include <qcheckbox.h>
 #include <qlabel.h>
-#include <qgroupbox.h>
+#include <q3groupbox.h>
 #include <qstring.h>
 #include <qpushbutton.h>
 #include <simplecfg.h>

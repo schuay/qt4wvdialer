@@ -20,7 +20,7 @@
 
 #include <simplecfg.h>
 #include <qfile.h>
-#include <qtextstream.h>
+#include <q3textstream.h>
 #include <qstringlist.h>
 #include <iostream>
 
@@ -198,7 +198,7 @@ SimpleCfg::load()
   
   QString group;
   
-  if (file.open( IO_ReadOnly ))
+  if (file.open( QIODevice::ReadOnly ))
   {
     clear();
     
@@ -257,9 +257,9 @@ SimpleCfg::save()
 {
   QFile file( fname );
   
-  if (file.open( IO_WriteOnly ))
+  if (file.open( QIODevice::WriteOnly ))
   {
-    QTextStream s(&file);
+    Q3TextStream s(&file);
     
     QMap<QString,SimpleCfgGroup *>::Iterator it;
         

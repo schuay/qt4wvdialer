@@ -20,7 +20,7 @@
 
 #include <wvlogfile.h>
 #include <qfile.h>
-#include <qtextstream.h>
+#include <q3textstream.h>
 #include <qdatetime.h>
 #include <qpixmap.h>
 #include <sumitem.h>
@@ -154,7 +154,7 @@ WVLogfile::load()
   
   list.clear();
   
-  if (file.open( IO_ReadOnly ))
+  if (file.open( QIODevice::ReadOnly ))
   {
     char *buffer = new char [2000];
     
@@ -191,9 +191,9 @@ WVLogfile::append( const QString & account, unsigned start,
   
   QFile file( filename );
   
-  if (file.open( IO_WriteOnly | IO_Append ))
+  if (file.open( QIODevice::WriteOnly | QIODevice::Append ))
   {
-    QTextStream s( &file );
+    Q3TextStream s( &file );
     
     s << entry->logLine();
     
@@ -204,7 +204,7 @@ WVLogfile::append( const QString & account, unsigned start,
 }
 
 void
-WVLogfile::fillList( QListView * lv ) const
+WVLogfile::fillList( Q3ListView * lv ) const
 {
   lv->clear();
   lv->setUpdatesEnabled( false );
@@ -223,7 +223,7 @@ WVLogfile::fillList( QListView * lv ) const
     //
     SumItem *parent=0;
     
-    for (QListViewItem *item=lv->firstChild(); item; item=item->nextSibling())
+    for (Q3ListViewItem *item=lv->firstChild(); item; item=item->nextSibling())
     {
       if (item->text(0) == entry->account())
       {
@@ -240,7 +240,7 @@ WVLogfile::fillList( QListView * lv ) const
       parent->setPixmap( 0, *providerPix() );
     }
     
-    QListViewItem *connection = new QListViewItem( parent, 
+    Q3ListViewItem *connection = new Q3ListViewItem( parent, 
                        "", entry->day(), entry->startTime(),
                        entry->durationStr(), entry->downloadStr(), 
                        entry->uploadStr() );

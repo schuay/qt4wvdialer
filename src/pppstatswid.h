@@ -23,6 +23,10 @@
 
 #include <qwidget.h>
 #include <qpixmap.h>
+//Added by qt3to4:
+#include <QPaintEvent>
+#include <QResizeEvent>
+#include <QTimerEvent>
 
 class PPPStatsWid : public QWidget
 {

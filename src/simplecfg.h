@@ -24,7 +24,7 @@
 #include <qstring.h>
 #include <qmap.h>
 #include <qcolor.h>
-#include <qtextstream.h>
+#include <q3textstream.h>
 
 // I _REALLY_ like writing documentation. Here documentation
 // efficiently hides the code ...
@@ -162,9 +162,9 @@ protected:
   /// Rename the group
   void setName( const QString & name );
   /// Read from QTextStream
-  void read( QTextStream & );
+  void read( Q3TextStream & );
   /// Write to QTextStream
-  void write( QTextStream & );
+  void write( Q3TextStream & );
   
   QMap<QString,QString> map;
   QString               groupName;
