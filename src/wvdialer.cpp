@@ -100,7 +100,6 @@ WVDialer::WVDialer( QWidget *parent, const char *name ) :
 
 WVDialer::~WVDialer()
 {
-    delete trayIcon;
 }
 
 void

@@ -42,7 +42,8 @@ PPPStats::PPPStats() :
   rxTotal( 0 ),
   txTotal( 0 ),
   pppDev( 0 ),
-  pppUp( false )
+  pppUp( false ),
+  timerId( 0 )
 {
   if ((soc = socket(AF_INET, SOCK_DGRAM, 0)) < 0) 
   {
@@ -84,13 +85,13 @@ PPPStats::timerEvent( QTimerEvent * )
 void
 PPPStats::start()
 {
-  startTimer( 2000 );
+  timerId = startTimer( 2000 );
 }
 
 void
 PPPStats::stop()
 {
-  stop();
+  killTimer(timerId);
 }
 
 void

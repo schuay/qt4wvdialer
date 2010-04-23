@@ -134,13 +134,11 @@ WVLogfileEntry::dataStr( unsigned bytes ) const
 
 WVLogfile::WVLogfile()
 {
-  //list.setAutoDelete( true );
 }
 
 WVLogfile::WVLogfile( const QString & fname ) :
   filename( fname )
 {
-  //list.setAutoDelete( true );
 }
 
 WVLogfile::~WVLogfile()
@@ -152,6 +150,7 @@ WVLogfile::load()
 {
   QFile file( filename );
   
+  qDeleteAll(list);
   list.clear();
   
   if (file.open( QIODevice::ReadOnly ))
@@ -180,6 +179,7 @@ WVLogfile::load()
 void
 WVLogfile::clear()
 {
+    qDeleteAll(list);
   list.clear();
 }
 
@@ -218,9 +218,9 @@ WVLogfile::fillList( Q3ListView * lv ) const
   
   it.toBack();
   
-  while (it.hasNext())
+  while (it.hasPrevious())
   {
-    entry = it.next();
+    entry = it.previous();
     // search parent, create if it does not exist yet
     //
     SumItem *parent=0;
