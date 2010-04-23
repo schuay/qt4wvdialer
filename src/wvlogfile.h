@@ -77,7 +77,7 @@ public:
   
 protected:
   QString               filename;
-  QList<WVLogfileEntry> list;
+  QList<WVLogfileEntry*> list;
   
   QPixmap *providerPix() const;
   QPixmap *connectionPix() const;

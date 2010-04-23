@@ -49,6 +49,8 @@ protected:
   virtual void timerEvent( QTimerEvent* e );
   void getRemoteAddr();
   
+  int timerId;
+
 signals:
   void status( unsigned rxDelta, unsigned txDelta, 
                unsigned rxTotal, unsigned txTotal );

@@ -25,6 +25,7 @@
 
 #include <qpushbutton.h>
 #include <q3listbox.h>
+#include <QDateTime>
 #include <qcombobox.h>
 #include <qlineedit.h>
 #include <qspinbox.h>

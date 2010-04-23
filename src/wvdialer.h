@@ -26,6 +26,7 @@
 #include <q3listbox.h>
 #include <qcombobox.h>
 #include <q3process.h>
+#include <QDateTime>
 //Added by qt3to4:
 #include <QTimerEvent>
 #include <QCloseEvent>

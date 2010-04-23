@@ -134,13 +134,11 @@ WVLogfileEntry::dataStr( unsigned bytes ) const
 
 WVLogfile::WVLogfile()
 {
-  list.setAutoDelete( true );
 }
 
 WVLogfile::WVLogfile( const QString & fname ) :
   filename( fname )
 {
-  list.setAutoDelete( true );
 }
 
 WVLogfile::~WVLogfile()
@@ -152,6 +150,7 @@ WVLogfile::load()
 {
   QFile file( filename );
   
+  qDeleteAll(list);
   list.clear();
   
   if (file.open( QIODevice::ReadOnly ))
@@ -179,6 +178,7 @@ WVLogfile::load()
 void
 WVLogfile::clear()
 {
+  qDeleteAll(list);
   list.clear();
 }
 
@@ -209,16 +209,18 @@ WVLogfile::fillList( Q3ListView * lv ) const
   lv->clear();
   lv->setUpdatesEnabled( false );
   
-  QListIterator<WVLogfileEntry> it(list);
+  QListIterator<WVLogfileEntry*> it(list);
   WVLogfileEntry *entry;
   
   unsigned duration=0, upload=0, download=0;
   int providerCnt = 0;
   
-  it.toLast();
+  it.toBack();
   
-  while ((entry = it.current()))
+  while (it.hasPrevious())
   {
+    entry = it.previous();
+
     // search parent, create if it does not exist yet
     //
     SumItem *parent=0;
@@ -253,8 +255,6 @@ WVLogfile::fillList( Q3ListView * lv ) const
     duration += entry->duration();
     upload += entry->upload();
     download += entry->download();
-    
-    --it;
   }
   
   // show total sum if more than one provider
