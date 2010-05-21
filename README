@@ -13,3 +13,9 @@ contains tons of bugs and outside my box it will crash every second or
 two. Try it and we will learn more ...
 
 QtWvDialer is distributed under the GNU Public License, version 2.
+
+QtWvDialer by Matthias Toussaint
+http://www.mtoussaint.de/qtwvdialer.html
+
+Ported to Qt4 by Jakob Gruber <jakob.gruber@gmail.com>
+http://github.com/schuay/qt4wvdialer

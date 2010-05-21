@@ -41,3 +41,8 @@
 
 04/02/2007 Version 0.4.4
            - Fixed configure script
+
+-----
+
+April 2010 qt4wvdialer Version 0.4.4
+           - Port to Qt4
